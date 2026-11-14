@@ -26,7 +26,7 @@ Requires Node 18+ (20 recommended).
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
+npm run dev        
 npm run build      # type-checks, then builds to dist/
 npm run preview    # serves the production build
 ```
