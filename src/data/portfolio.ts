@@ -14,7 +14,6 @@ export const profile = {
     "Cyber Security Enthusiast",
     "Software Developer",
     "Machine Learning Practitioner",
-    "Problem Solver",
   ],
   education: {
     institute: "Institute of Aeronautical Engineering, Hyderabad, India",
@@ -67,14 +66,14 @@ export type SkillIcon = "code" | "globe" | "database" | "brain" | "shield";
 export const skillGroups: { title: string; icon: SkillIcon; skills: string[] }[] = [
   { title: "Programming Languages", icon: "code", skills: ["Java", "Python", "C++", "C#"] },
   {
-    title: "Frontend and Web Technologies",
+    title: "Web Technologies",
     icon: "globe",
-    skills: ["HTML", "CSS", "JavaScript", "React", "REST APIs", "HTTPS"],
+    skills: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
     title: "Backend and Database",
     icon: "database",
-    skills: ["Spring Boot", "MySQL", "Redis", "Playwright"],
+    skills: ["Spring Boot", "MySQL","REST APIs", "HTTPS", "Redis", "Playwright"],
   },
   {
     title: "AI and Machine Learning",
@@ -85,6 +84,7 @@ export const skillGroups: { title: string; icon: SkillIcon; skills: string[] }[]
       "NumPy",
       "Seaborn",
       "Scikit-learn",
+      "Hugging Face",
       "Model Evaluation",
       "Feature Engineering",
     ],
@@ -92,7 +92,7 @@ export const skillGroups: { title: string; icon: SkillIcon; skills: string[] }[]
   {
     title: "Cyber Security and Tools",
     icon: "shield",
-    skills: ["Wireshark", "SIEM", "Metasploit", "VS Code", "Git", "GitHub", "Azure (Basic)"],
+    skills: ["VS Code", "Google Colab", "Jupyter Notebook", "GitHub", "Git", "Wireshark", "OSNIT", "Azure (Basics)"],
   },
 ];
 
@@ -108,7 +108,7 @@ export const experience = [
   },
 ];
 
-export type ProjectVisual = "url" | "iris" | "ids";
+export type ProjectVisual = "url" | "iris" | "ids" | "quantum";
 
 export interface Project {
   id: string;
