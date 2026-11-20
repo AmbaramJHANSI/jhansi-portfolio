@@ -52,6 +52,79 @@ function IrisVisual() {
   );
 }
 
+function QuantumVisual() {
+  const gate = (x: number, y: number, label: string, color: string) => (
+    <g>
+      <rect x={x} y={y} width="26" height="20" rx="5" fill={color} fillOpacity="0.18" stroke={color} strokeWidth="1.5" />
+      <text x={x + 13} y={y + 14} textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="10" fill={color}>
+        {label}
+      </text>
+    </g>
+  );
+
+  return (
+    <svg viewBox="0 0 320 160" className="h-full w-full" role="img" aria-label="Grover search over a database, driven by a quantum circuit, feeding a quantum-kernel decision boundary">
+      <defs>
+        <linearGradient id="qk" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="#22d3ee" />
+          <stop offset="1" stopColor="#8b5cf6" />
+        </linearGradient>
+        <radialGradient id="qglow" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stopColor="#f0abfc" stopOpacity="0.9" />
+          <stop offset="1" stopColor="#8b5cf6" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+
+      {/* Qubit circuit */}
+      <g stroke="#64748b" strokeOpacity="0.5" strokeWidth="1.5">
+        <path d="M20 22h130" />
+        <path d="M20 36h130" />
+        <path d="M20 50h130" />
+      </g>
+      <circle cx="20" cy="22" r="3" fill="#22d3ee" />
+      <circle cx="20" cy="36" r="3" fill="#22d3ee" />
+      <circle cx="20" cy="50" r="3" fill="#22d3ee" />
+      {gate(32, 28, "H", "#22d3ee")}
+      <rect x="70" y="22" width="44" height="34" rx="7" fill="#8b5cf6" fillOpacity="0.12" stroke="#8b5cf6" strokeWidth="1.5" />
+      <text x="92" y="40" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="#c4b5fd">
+        Oracle
+      </text>
+      <text x="92" y="52" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="8" fill="#94a3b8">
+        U_f
+      </text>
+      {gate(126, 28, "U", "#f0abfc")}
+      <path d="M158 36h14" stroke="url(#qk)" strokeWidth="2" strokeLinecap="round" />
+      <path d="M166 32l8 4-8 4" fill="none" stroke="#8b5cf6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+
+      {/* Grover search: database cylinder with marked item */}
+      <g transform="translate(20 70)">
+        <ellipse cx="26" cy="10" rx="20" ry="7" fill="none" stroke="#4f8cff" strokeWidth="1.5" />
+        <path d="M6 10v26c0 4 8 7 20 7s20-3 20-7V10" fill="rgba(79,140,255,0.08)" stroke="#4f8cff" strokeWidth="1.5" />
+        <rect x="14" y="22" width="24" height="7" rx="2" fill="#4f8cff" fillOpacity="0.5" />
+        <rect x="14" y="32" width="16" height="7" rx="2" fill="#4f8cff" fillOpacity="0.35" />
+        <circle cx="40" cy="26" r="6" fill="url(#qglow)" />
+        <circle cx="40" cy="26" r="2.5" fill="#fdf4ff" />
+        <text x="58" y="30" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="#94a3b8">Grover</text>
+      </g>
+
+      {/* Quantum-kernel clusters with decision boundary */}
+      <g transform="translate(170 70)">
+        <path d="M0 70 Q20 40 40 50 T80 30" fill="none" stroke="#f0abfc" strokeOpacity="0.8" strokeDasharray="3 4" strokeWidth="1.5" />
+        {[[14, 58], [22, 66], [18, 76], [30, 62]].map(([x, y], i) => (
+          <circle key={`a${i}`} cx={x} cy={y} r="3.5" fill="#4f8cff" fillOpacity="0.9" />
+        ))}
+        {[[58, 30], [66, 38], [54, 44], [70, 26]].map(([x, y], i) => (
+          <circle key={`b${i}`} cx={x} cy={y} r="3.5" fill="#8b5cf6" fillOpacity="0.9" />
+        ))}
+        <text x="40" y="90" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="#94a3b8">quantum kernel</text>
+      </g>
+
+      <text x="290" y="150" textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="#64748b">Qiskit · Aer
+      </text>
+    </svg>
+  );
+}
+
 function IdsVisual() {
   return (
     <svg viewBox="0 0 320 160" className="h-full w-full" role="img" aria-label="Network packets filtered through a shield with an anomaly flagged">
@@ -84,6 +157,7 @@ export default function ProjectVisual({ kind }: { kind: Kind }) {
         {kind === "url" && <UrlVisual />}
         {kind === "iris" && <IrisVisual />}
         {kind === "ids" && <IdsVisual />}
+        {kind === "quantum" && <QuantumVisual />}
       </div>
     </div>
   );
