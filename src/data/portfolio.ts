@@ -125,6 +125,27 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+  id: "quantumlab",
+  title: "QuantumLab: Grover’s Search & Quantum-Kernel Classification",
+  date: "November 2026",
+  visual: "quantum",
+  summary:
+    "A quantum computing project implementing Grover’s search algorithm from scratch and quantum-kernel SVM classification using Qiskit, with simulations and performance analysis.",
+  points: [
+    "Implemented Grover’s search algorithm from scratch using custom oracle and diffuser circuits on Qiskit Aer for 3–8 qubits, with simulated success probabilities matching theoretical predictions within 0.003.",
+    "Verified optimal Grover iteration scaling with √N and analyzed the impact of 1% gate error, demonstrating success probability degradation to random-guess levels.",
+    "Built a 4-qubit quantum-kernel SVM for Iris classification, achieving 93.8% test accuracy compared to 96.0% for a classical RBF-SVM.",
+    "Tuned the quantum-kernel model using cross-validation exclusively on training data and analyzed the effects of circuit depth and feature scaling on kernel quality."
+  ],
+  tech: ["Python", "Qiskit", "Qiskit Aer", "Quantum Computing", "SVM", "Machine Learning"],
+  metrics: [
+    { value: "3–8", label: "Qubits simulated" },
+    { value: "93.8%", label: "Quantum SVM test accuracy" },
+    { value: "0.003", label: "Maximum simulation error vs theory" },
+  ],
+  github: "https://github.com/AmbaramJHANSI/QuantumLab",
+  },
+  {
     id: "url-shortener",
     title: "Scalable URL Shortener with Redis Caching",
     date: "June 2026",
