@@ -90,7 +90,7 @@ export const skillGroups: { title: string; icon: SkillIcon; skills: string[] }[]
     ],
   },
   {
-    title: "Cyber Security and Tools",
+    title: "Frameworks and Tools",
     icon: "shield",
     skills: ["VS Code", "Google Colab", "Jupyter Notebook", "GitHub", "Git", "Wireshark", "OSNIT", "Azure (Basics)"],
   },
