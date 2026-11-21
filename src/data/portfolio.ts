@@ -161,6 +161,8 @@ export const projects: Project[] = [
     tech: ["Java", "Spring Boot", "MySQL", "Redis"],
     metrics: [
       { value: "Redis", label: "Cached URL lookups" },
+      { value: "Analytics", label: "Click tracking and reporting" },
+      { value: "Custom aliases", label: "User-defined short codes" },
       { value: "QR", label: "Code generation" },
     ],
     github: "https://github.com/AmbaramJHANSI/scalable-url-shortener-redis-caching",
