@@ -68,12 +68,12 @@ export const skillGroups: { title: string; icon: SkillIcon; skills: string[] }[]
   {
     title: "Web Technologies",
     icon: "globe",
-    skills: ["HTML", "CSS", "JavaScript", "React"],
+  skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "JSON"],
   },
   {
     title: "Backend and Database",
     icon: "database",
-    skills: ["Spring Boot", "MySQL","REST APIs", "HTTPS", "Redis", "Playwright"],
+    skills: ["MySQL","REST APIs","Spring Boot","Flask", "HTTPS", "Redis", "Playwright"],
   },
   {
     title: "AI and Machine Learning",
@@ -92,7 +92,7 @@ export const skillGroups: { title: string; icon: SkillIcon; skills: string[] }[]
   {
     title: "Frameworks and Tools",
     icon: "shield",
-    skills: ["VS Code", "Google Colab", "Jupyter Notebook", "GitHub", "Git", "Wireshark", "OSNIT", "Azure (Basics)"],
+    skills: ["VS Code", "Google Colab", "GitHub", "Git", "n8n", "Wireshark", "OSNIT"],
   },
 ];
 
@@ -229,12 +229,7 @@ export const codingProfiles = [
 ];
 
 export const certifications = [
-  {
-    title: "Micro-Certification – Welcome to ServiceNow",
-    issuer: "ServiceNow",
-    date: "November 2026",
-    url: "https://drive.google.com/file/d/12nJd8KQTBvOm40KL-XVl_DOcUsYgz-RV/view?usp=sharing",
-  },
+
   {
     title: "AI Essentials",
     issuer: "Google",
@@ -258,6 +253,13 @@ export const certifications = [
     issuer: "TryHackMe",
     date: "July 2025",
     url: "https://drive.google.com/file/d/18phAKT2VuS_96vRNJEtwzx0yA8pO8K2c/view?usp=sharing",
+  },
+
+  {
+    title: "Micro-Certification – Welcome to ServiceNow",
+    issuer: "ServiceNow",
+    date: "November 2026",
+    url: "https://drive.google.com/file/d/12nJd8KQTBvOm40KL-XVl_DOcUsYgz-RV/view?usp=sharing",
   },
 
 ];
