@@ -73,7 +73,7 @@ export const skillGroups: { title: string; icon: SkillIcon; skills: string[] }[]
   {
     title: "Backend and Database",
     icon: "database",
-    skills: ["MySQL","REST APIs","Spring Boot","Flask", "HTTPS", "Redis", "Playwright"],
+    skills: ["MySQL","REST APIs","Spring Boot","Flask", "HTTPS", "Redis"],
   },
   {
     title: "AI and Machine Learning",
