@@ -147,7 +147,7 @@ export const projects: Project[] = [
   },
   {
     id: "url-shortener",
-    title: "Scalable URL Shortener with Redis Caching",
+    title: "Shortly - Scalable URL Shortener with Redis Caching",
     date: "June 2026",
     visual: "url",
     summary:
@@ -164,6 +164,7 @@ export const projects: Project[] = [
       { value: "QR", label: "Code generation" },
     ],
     github: "https://github.com/AmbaramJHANSI/scalable-url-shortener-redis-caching",
+    demo: "https://scalable-url-shortener-redis-caching-production.up.railway.app/",
   },
   {
     id: "iris-insight",
